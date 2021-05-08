@@ -30,7 +30,7 @@ class Card:
 
     def __eq__(self, other):
         """return True if two cards are equal and False if not"""
-        if type(self.value) == int and type(self.__power == int):
+        if self.value is not None and self.__power != 0 and other.value is not None and other.__power != 0:
             if self.value == other.value and self.__power == other.__power:
                 return True
             else:
@@ -41,7 +41,7 @@ class Card:
 
     def __gt__(self, other):
         """return True if a card is greater than the other and False if not"""
-        if type(self.value) == int and type(self.__power == int):
+        if self.value is not None and self.__power != 0 and other.value is not None and other.__power != 0:
             if self.value == 1 and other.value > 1:
                 return True
             if self.value > 1 and other.value == 1:
