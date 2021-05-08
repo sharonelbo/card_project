@@ -1,6 +1,7 @@
 import random
 class Player:
-    def __init__(self,name ,num_of_cards = 10):
+
+    def __init__(self, name, num_of_cards=10):
         self.name = name
         if num_of_cards > 26:
             self.num_of_cards = 26
