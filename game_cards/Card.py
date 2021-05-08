@@ -4,8 +4,8 @@ class Card:
         if type(value) == int:
             if 0 <= value <= 13:
                 self.value = value
-        else:
-            self.value = None
+            else:
+                self.value = None
 
         if suit != "diamond" and suit != "spade" and suit != "heart" and suit != "club":
             self.suit = None
