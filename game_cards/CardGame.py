@@ -1,10 +1,11 @@
 from game_cards.Player import Player
 from game_cards.DeckOfCards import DeckOfCards
 
-class CardGame(Player,DeckOfCards):
-    def __init__(self,name1,name2,num_of_cards = 10):
+class CardGame(Player, DeckOfCards):
+
+    def __init__(self, name1, name2, num_of_cards=10):
         self.deck = DeckOfCards()
-        self.players = [Player(name1,num_of_cards),Player(name2,num_of_cards)]
+        self.players = [Player(name1, num_of_cards), Player(name2, num_of_cards)]
         self.__started = False
 
     def __repr__(self):
