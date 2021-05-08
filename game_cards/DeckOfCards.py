@@ -5,19 +5,19 @@ class DeckOfCards(Card):
         """creates a deck with 52 cards"""
         self.deck = []
         for n in range(1,14):
-            card1 = Card("diamond", n)
+            card1 = Card(n, "diamond")
             self.deck.append(card1)
 
         for n in range(1,14):
-            card1 = Card("spade", n)
+            card1 = Card(n, "spade")
             self.deck.append(card1)
 
         for n in range(1,14):
-            card1 = Card("heart", n)
+            card1 = Card(n, "heart")
             self.deck.append(card1)
 
         for n in range(1,14):
-            card1 = Card("club", n)
+            card1 = Card(n, "club")
             self.deck.append(card1)
 
 
