@@ -23,7 +23,6 @@ class Card:
         elif self.suit == "club":
             self.__power = 4
 
-
     def __str__(self):
         """"""
         return f"{self.value} {self.suit}"
@@ -36,7 +35,7 @@ class Card:
             else:
                 return False
         else:
-            print("Error one card or more isnt valid")
+            print("Error one card or more isn't valid")
             return
 
     def __gt__(self, other):
@@ -56,7 +55,7 @@ class Card:
                 else:
                     return False
         else:
-            print("Error one card or more isnt valid")
+            print("Error one card or more isn't valid")
             return
 
     def __repr__(self):

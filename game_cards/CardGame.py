@@ -1,6 +1,7 @@
 from game_cards.Player import Player
 from game_cards.DeckOfCards import DeckOfCards
 
+
 class CardGame(Player, DeckOfCards):
 
     def __init__(self, name1, name2, num_of_cards=10):
@@ -31,5 +32,3 @@ class CardGame(Player, DeckOfCards):
             return self.players[0]
         else:
             return
-
-

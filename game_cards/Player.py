@@ -1,6 +1,7 @@
 import random
-class Player:
 
+
+class Player:
     def __init__(self, name, num_of_cards=10):
         self.name = name
         if num_of_cards > 26:
@@ -22,7 +23,7 @@ class Player:
 
     def get_card(self):
         """take a random card from the player"""
-        return self.__hand.pop(random.randint(0,len(self.__hand)-1))
+        return self.__hand.pop(random.randint(0, len(self.__hand) - 1))
 
     def add_card(self, card):
         """gets a card and add it to the player hand"""

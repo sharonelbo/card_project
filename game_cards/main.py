@@ -28,4 +28,3 @@ if game1.get_winner() is not None:
     print("The winner of the game is", game1.get_winner().name)
 else:
     print("Its a tie")
-
