@@ -3,8 +3,8 @@ from game_cards.DeckOfCards import DeckOfCards
 from game_cards.Card import Card
 from game_cards.CardGame import CardGame
 
-player1 = input("please enter the first player name:")
-player2 = input("please enter the second player name:")
+player1 = input("please enter the first player name: ")
+player2 = input("please enter the second player name: ")
 game1 = CardGame(player1, player2, 10)
 game1.new_game()
 print(game1)
@@ -28,3 +28,4 @@ if game1.get_winner() is not None:
     print("The winner of the game is", game1.get_winner().name)
 else:
     print("Its a tie")
+
