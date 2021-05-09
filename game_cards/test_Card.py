@@ -40,3 +40,17 @@ class TestCard(TestCase):
         self.card1 = Card(15, "sdda")
         self.card2 = Card(-1, "fddfsdf")
         self.assertTrue((self.card1 > self.card2) is None)
+
+    def test_eq(self):
+        card1 = Card(1, "heart")
+        card2 = Card(1, "heart")
+        self.assertTrue(card1 == card2)
+        card1 = Card(1, "heart")
+        card2 = Card(1, "diamond")
+        self.assertFalse(card1 == card2)
+        card1 = Card(2, "heart")
+        card2 = Card(3, "heart")
+        self.assertFalse(card1 == card2)
+        card1 = Card(1, 1)
+        card2 = Card(1, "heart")
+        self.assertEqual(card1 == card2,None)

@@ -61,3 +61,14 @@ class Card:
 
     def __repr__(self):
         return f"{self.value} {self.suit}"
+
+    def __eq__(self, other):
+        """return True if two cards are equal and False if not"""
+        if self.value is not None and self.__power != 0 and other.value is not None and other.__power != 0:
+            if self.value == other.value and self.__power == other.__power:
+                return True
+            else:
+                return False
+        else:
+            print("Error one card or more isn't valid")
+

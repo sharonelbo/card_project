@@ -1,5 +1,5 @@
 from game_cards.Card import Card
-import random
+from random import randint, shuffle
 
 
 class DeckOfCards(Card):
@@ -24,7 +24,7 @@ class DeckOfCards(Card):
 
     def shuffle(self):
         """shuffles the deck"""
-        random.shuffle(self.deck)
+        shuffle(self.deck)
 
     def __repr__(self):
         return f"{self.deck}"
@@ -34,7 +34,7 @@ class DeckOfCards(Card):
 
     def deal_one(self):
         """draws one random card from the deck and returns it"""
-        return self.deck.pop(random.randint(0, len(self.deck) - 1))
+        return self.deck.pop(randint(0, len(self.deck) - 1))
 
     def show(self):
         """print the deck"""

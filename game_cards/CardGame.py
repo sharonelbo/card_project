@@ -6,24 +6,22 @@ class CardGame(Player, DeckOfCards):
 
     def __init__(self, name1, name2, num_of_cards=10):
         self.deck = DeckOfCards()
-        if type(name1) == str and type(name2)==str and type(num_of_cards) == int:
-                if 0 <= num_of_cards <= 26:
-                    self.players = [Player(name1, num_of_cards), Player(name2, num_of_cards)]
-                else:
-                    self.players = [Player(name1, 10), Player(name2, 10)]
+        if type(name1) != str:
+            player1 = "player1"
         else:
-            if type(name1) != str:
-                if type(name2) != str:
-                    if type(num_of_cards) != int:
-                        self.players = [Player("player1", 10), Player("player2", 10)]
-
-
-
-
-
-
-
-
+            player1 = name1
+        if type(name2) != str:
+            player2 = "player2"
+        else:
+            player2 = name2
+        if type(num_of_cards) == int:
+                if 0<= num_of_cards <= 26:
+                    num = num_of_cards
+                else:
+                    num = 10
+        else:
+            num = 10
+        self.players = [Player(player1, num), Player(player2, num)]
         self.__started = False
 
     def __repr__(self):
@@ -40,12 +38,14 @@ class CardGame(Player, DeckOfCards):
             self.__started = True
         else:
             print("Error, the game already started")
-            return
 
     def get_winner(self):
-        if self.players[0].get_hand() > self.players[1].get_hand():
+        if len(self.players[0]._Player__hand) > len(self.players[1]._Player__hand):
+            self.__started = False
             return self.players[1]
-        elif self.players[1].get_hand() > self.players[0].get_hand():
+        elif len(self.players[0]._Player__hand) < len(self.players[1]._Player__hand):
+            self.__started = False
             return self.players[0]
         else:
+            self.__started = False
             return

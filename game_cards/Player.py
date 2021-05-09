@@ -49,6 +49,3 @@ class Player:
     def show(self):
         """prints the player name and hand"""
         print(f"name: {self.name}, hand: {self.__hand}")
-
-    def get_hand(self):
-        return len(self.__hand)
