@@ -2,10 +2,12 @@ class Card:
     def __init__(self, value, suit):
         """creates a card that has a suit and a value"""
         if type(value) == int:
-            if 0 <= value <= 13:
+            if 1 <= value <= 13:
                 self.value = value
             else:
                 self.value = None
+        else:
+            self.value = None
 
         if suit != "diamond" and suit != "spade" and suit != "heart" and suit != "club":
             self.suit = None
@@ -27,16 +29,16 @@ class Card:
         """"""
         return f"{self.value} {self.suit}"
 
-    def __eq__(self, other):
-        """return True if two cards are equal and False if not"""
-        if self.value is not None and self.__power != 0 and other.value is not None and other.__power != 0:
-            if self.value == other.value and self.__power == other.__power:
-                return True
-            else:
-                return False
-        else:
-            print("Error one card or more isn't valid")
-            return
+    # def __eq__(self, other):
+    #     """return True if two cards are equal and False if not"""
+    #     if self.value is not None and self.__power != 0 and other.value is not None and other.__power != 0:
+    #         if self.value == other.value and self.__power == other.__power:
+    #             return True
+    #         else:
+    #             return False
+    #     else:
+    #         print("Error one card or more isn't valid")
+    #         return
 
     def __gt__(self, other):
         """return True if a card is greater than the other and False if not"""
@@ -56,7 +58,6 @@ class Card:
                     return False
         else:
             print("Error one card or more isn't valid")
-            return
 
     def __repr__(self):
         return f"{self.value} {self.suit}"

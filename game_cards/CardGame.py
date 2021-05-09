@@ -6,7 +6,24 @@ class CardGame(Player, DeckOfCards):
 
     def __init__(self, name1, name2, num_of_cards=10):
         self.deck = DeckOfCards()
-        self.players = [Player(name1, num_of_cards), Player(name2, num_of_cards)]
+        if type(name1) == str and type(name2)==str and type(num_of_cards) == int:
+                if 0 <= num_of_cards <= 26:
+                    self.players = [Player(name1, num_of_cards), Player(name2, num_of_cards)]
+                else:
+                    self.players = [Player(name1, 10), Player(name2, 10)]
+        else:
+            if type(name1) != str:
+                if type(name2) != str:
+                    if type(num_of_cards) != int:
+                        self.players = [Player("player1", 10), Player("player2", 10)]
+
+
+
+
+
+
+
+
         self.__started = False
 
     def __repr__(self):

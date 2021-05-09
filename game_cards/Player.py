@@ -16,39 +16,39 @@ class Player:
                 self.num_of_cards = 0
         else:
             self.num_of_cards = 10
-        self.__hand = []
+        self._hand = []
 
     def set_hand(self, deck):
         """get a deck and give the player new cards for the hand"""
         if type(deck) == DeckOfCards:
             for i in range(self.num_of_cards):
-                self.__hand.append(deck.deal_one())
+                self._hand.append(deck.deal_one())
         else:
             print("Error you need to enter a valid deck")
 
     def __str__(self):
-        return f"name: {self.name}, hand: {self.__hand}"
+        return f"name: {self.name}, hand: {self._hand}"
 
     def __repr__(self):
-        return f"name: {self.name}, hand: {self.__hand}"
+        return f"name: {self.name}, hand: {self._hand}"
 
     def get_card(self):
         """take a random card from the player"""
-        if len(self.__hand) > 0:
-            return self.__hand.pop(random.randint(0, len(self.__hand) - 1))
+        if len(self._hand) > 0:
+            return self._hand.pop(random.randint(0, len(self._hand) - 1))
         else:
             print("the player doesnt have cards in his hands")
 
     def add_card(self, card):
         """gets a card and add it to the player hand"""
         if type(card) == Card:
-            self.__hand.append(card)
+            self._hand.append(card)
         else:
             print("Error you need to enter a valid card")
 
     def show(self):
         """prints the player name and hand"""
-        print(f"name: {self.name}, hand: {self.__hand}")
+        print(f"name: {self.name}, hand: {self._hand}")
 
     def get_hand(self):
-        return len(self.__hand)
+        return len(self._hand)
