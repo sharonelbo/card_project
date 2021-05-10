@@ -32,9 +32,9 @@ class TestPlayer(TestCase):
     def test_get_card(self):
         self.player1= Player("moti")
         self.player1.add_card(Card(8, "club"))
-        self.player1.get_card()
-        self.assertEqual(0, len(self.player1._Player__hand))
         self.assertEqual(self.player1.get_card(), Card(8, "club"))
+        self.assertEqual(0, len(self.player1._Player__hand))
+
 
     def test_invalid_get_card(self):
         self.player1 = Player("moti")

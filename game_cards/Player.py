@@ -12,10 +12,10 @@ class Player:
         if type(num_of_cards) == int:
             if num_of_cards > 26:
                 self.num_of_cards = 26
+            elif num_of_cards < 0:
+                self.num_of_cards = 0
             else:
                 self.num_of_cards = num_of_cards
-            if num_of_cards < 0:
-                self.num_of_cards = 0
         else:
             self.num_of_cards = 10
         self.__hand = []
