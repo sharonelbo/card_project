@@ -5,6 +5,7 @@ from game_cards.DeckOfCards import DeckOfCards
 class CardGame(Player, DeckOfCards):
 
     def __init__(self, name1, name2, num_of_cards=10):
+        """creates new a game"""
         self.deck = DeckOfCards()
         if type(name1) != str:
             player1 = "player1"
@@ -25,12 +26,15 @@ class CardGame(Player, DeckOfCards):
         self.__started = False
 
     def __repr__(self):
+        """returns a string when printing"""
         return f"{self.players[0]}\n{self.players[1]}"
 
     def __str__(self):
+        """returns a string when printing"""
         return f"{self.players[0]}\n{self.players[1]}"
 
     def new_game(self):
+        """starts a new game shuffles the deck and give players starting hands"""
         if not self.__started:
             self.deck.shuffle()
             self.players[0].set_hand(self.deck)
@@ -40,6 +44,7 @@ class CardGame(Player, DeckOfCards):
             print("Error, the game already started")
 
     def get_winner(self):
+        """returns the players that won the game if its a tie return None"""
         if len(self.players[0]._Player__hand) > len(self.players[1]._Player__hand):
             self.__started = False
             return self.players[1]

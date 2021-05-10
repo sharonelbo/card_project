@@ -8,6 +8,7 @@ class TestCardGame(TestCase):
         self.assertEqual("sharon", game1.players[0].name)
         self.assertEqual("avi", game1.players[1].name)
         self.assertEqual(10, game1.players[0].num_of_cards)
+        self.assertEqual(10, game1.players[1].num_of_cards)
 
     def test_invalid_game(self):
         game1 = CardGame(23, 9.6, 9000)
