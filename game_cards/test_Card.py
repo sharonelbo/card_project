@@ -18,11 +18,8 @@ class TestCard(TestCase):
         self.card1 = Card("*AS", "diamond")
         self.assertEqual(self.card1.value, None)
 
-    # noinspection SpellCheckingInspection,SpellCheckingInspection
     def test_invalid_suit(self):
-        # noinspection SpellCheckingInspection
         self.card1 = Card(1, "adsdsa#")
-        # noinspection SpellCheckingInspection
         self.assertNotEqual(self.card1.suit, "adsdsa#")
         self.assertEqual(self.card1.suit, None)
         self.card1 = Card(1, 9.5)
@@ -32,7 +29,7 @@ class TestCard(TestCase):
         self.card1 = Card(9.5, "abc")
         self.assertTrue(self.card1.value is None and self.card1.suit is None)
 
-    # noinspection SpellCheckingInspection,SpellCheckingInspection
+
     def test_gt(self):
         card2 = Card(1, "heart")
         card3 = Card(13, "diamond")
@@ -41,9 +38,7 @@ class TestCard(TestCase):
         self.assertTrue(card2 < card3)
         card3 = Card(12, "diamond")
         self.assertTrue(card2 > card3)
-        # noinspection SpellCheckingInspection
         self.card1 = Card(15, "sdda")
-        # noinspection SpellCheckingInspection
         self.card2 = Card(-1, "fddfsdf")
         self.assertTrue((self.card1 > self.card2) is None)
 

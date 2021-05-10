@@ -16,29 +16,24 @@ class Card:
 
         if self.suit is None:
             self.__power = 0
+            self.__symbol = None
         elif self.suit == "diamond":
             self.__power = 1
+            self.__symbol = "♦"
         elif self.suit == "spade":
             self.__power = 2
+            self.__symbol = "♠"
         elif self.suit == "heart":
             self.__power = 3
+            self.__symbol = "♥"
         elif self.suit == "club":
             self.__power = 4
+            self.__symbol = "♣"
+
 
     def __str__(self):
         """"""
-        return f"{self.value} {self.suit}"
-
-    # def __eq__(self, other):
-    #     """return True if two cards are equal and False if not"""
-    #     if self.value is not None and self.__power != 0 and other.value is not None and other.__power != 0:
-    #         if self.value == other.value and self.__power == other.__power:
-    #             return True
-    #         else:
-    #             return False
-    #     else:
-    #         print("Error one card or more isn't valid")
-    #         return
+        return f"{self.value}{self.__symbol}"
 
     def __gt__(self, other):
         """return True if a card is greater than the other and False if not"""
@@ -60,7 +55,7 @@ class Card:
             print("Error one card or more isn't valid")
 
     def __repr__(self):
-        return f"{self.value} {self.suit}"
+        return f"{self.value}{self.__symbol}"
 
     def __eq__(self, other):
         """return True if two cards are equal and False if not"""
