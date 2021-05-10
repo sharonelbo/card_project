@@ -15,10 +15,10 @@ class CardGame(Player, DeckOfCards):
         else:
             player2 = name2
         if type(num_of_cards) == int:
-                if 0<= num_of_cards <= 26:
-                    num = num_of_cards
-                else:
-                    num = 10
+            if 0 <= num_of_cards <= 26:
+                num = num_of_cards
+            else:
+                num = 10
         else:
             num = 10
         self.players = [Player(player1, num), Player(player2, num)]

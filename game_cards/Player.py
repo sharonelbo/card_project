@@ -1,6 +1,8 @@
 import random
 from game_cards.DeckOfCards import DeckOfCards
 from game_cards.Card import Card
+
+
 class Player:
     def __init__(self, name, num_of_cards=10):
         if type(name) == str:
@@ -8,11 +10,11 @@ class Player:
         else:
             self.name = "player"
         if type(num_of_cards) == int:
-             if num_of_cards > 26:
-                 self.num_of_cards = 26
-             else:
-                 self.num_of_cards = num_of_cards
-             if num_of_cards < 0:
+            if num_of_cards > 26:
+                self.num_of_cards = 26
+            else:
+                self.num_of_cards = num_of_cards
+            if num_of_cards < 0:
                 self.num_of_cards = 0
         else:
             self.num_of_cards = 10

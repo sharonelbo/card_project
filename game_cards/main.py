@@ -10,7 +10,7 @@ game1.new_game()
 print(game1)
 print()
 for i in range(10):
-    print("round", i+1)
+    print("round", i + 1)
     card1 = game1.players[0].get_card()
     card2 = game1.players[1].get_card()
     if card1 > card2:

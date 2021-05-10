@@ -8,8 +8,8 @@ class TestDeckOfCards(TestCase):
         self.deck1 = DeckOfCards()
 
     def test_valid_deck(self):
-        self.assertEqual(len(self.deck1.deck),52)
+        self.assertEqual(len(self.deck1.deck), 52)
 
-    def test_deal_one(self,):
+    def test_deal_one(self, ):
         self.assertTrue(type(self.deck1.deal_one()) == Card)
-        self.assertNotIn(self.deck1.deal_one(),self.deck1.deck)
+        self.assertNotIn(self.deck1.deal_one(), self.deck1.deck)
