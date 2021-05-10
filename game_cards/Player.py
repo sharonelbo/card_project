@@ -29,9 +29,11 @@ class Player:
             print("Error you need to enter a valid deck")
 
     def __str__(self):
+        """returns a string when printing"""
         return f"name: {self.name}, hand: {self.__hand}"
 
     def __repr__(self):
+        """returns a string when printing"""
         return f"name: {self.name}, hand: {self.__hand}"
 
     def get_card(self):

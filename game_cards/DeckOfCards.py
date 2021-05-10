@@ -27,9 +27,11 @@ class DeckOfCards(Card):
         shuffle(self.deck)
 
     def __repr__(self):
+        """returns a string when printing"""
         return f"{self.deck}"
 
     def __str__(self):
+        """returns a string when printing"""
         return f"{self.deck}"
 
     def deal_one(self):

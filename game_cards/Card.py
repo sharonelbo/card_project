@@ -32,7 +32,7 @@ class Card:
 
 
     def __str__(self):
-        """"""
+        """returns a string when printing"""
         return f"{self.value}{self.__symbol}"
 
     def __gt__(self, other):
@@ -55,6 +55,7 @@ class Card:
             print("Error one card or more isn't valid")
 
     def __repr__(self):
+        """returns a string when printing"""
         return f"{self.value}{self.__symbol}"
 
     def __eq__(self, other):
