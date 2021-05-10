@@ -38,7 +38,6 @@ class TestPlayer(TestCase):
 
     def test_invalid_get_card(self):
         self.player1 = Player("moti")
-        self.player1.get_card()
         self.assertEqual(self.player1.get_card(), None)
 
     def test_valid_add_card(self):
